@@ -19,33 +19,38 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   button:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
   }
   
   /* Conteneur du profil */
   div {
     text-align: center;
     margin: 20px;
+    animation: fadeIn 1s ease-in-out;
   }
   
   h1 {
     font-size: 24px;
     margin: 10px 0;
+    animation: slideDown 0.8s ease-in-out;
   }
   
   h2 {
     font-size: 20px;
     color: #555;
+    animation: slideDown 1s ease-in-out;
   }
   
   h3 {
     font-size: 18px;
     color: #777;
     margin-bottom: 15px;
+    animation: slideDown 1.2s ease-in-out;
   }
   
   img {
@@ -53,11 +58,45 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1.5s ease-in-out;
   }
   
   p {
     font-size: 16px;
     margin-top: 15px;
     color: #555;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
   
