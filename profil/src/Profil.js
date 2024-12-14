@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './profistyles.css';
 export class Profil extends Component {
        constructor(props){
           super(props);

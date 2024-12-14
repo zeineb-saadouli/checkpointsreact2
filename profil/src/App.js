@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Profil from './Profil';
+import Profil from './Profil.js';
 
 function App() {
   return (
